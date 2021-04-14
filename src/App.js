@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import jiangZaoImg from "./assets/images/jiangzao_default.svg";
+import jiangZaoMov1 from "./assets/vidoes/jiangzao_1.mov";
+
+import "./scss/index.scss";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="oppo-container">
+      <div className="header">
+        <div className="header-title">OPPO Enco X</div>
+        <div className="header-sub-title">声学旗舰，听见灵感</div>
+      </div>
+      <div className="main">
+        <img className="enco-image" src={jiangZaoImg} alt="OPPO Enco X" />
+        {/* todo image */}
+        {/*<video muted className="enco-video" autoplay="autoplay">*/}
+        {/*  <source style={{ height: "100%" }} src={jiangZaoMov1} />*/}
+        {/*</video>*/}
+      </div>
+      <div className="footer">
+        <div className="buy-button">立即购买</div>
+      </div>
     </div>
   );
 }
-
-export default App;

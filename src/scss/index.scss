@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import "./util";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @include root-font-size();
+  font-family: PingFangSC-Regular, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body, #root {
+  background-color: #000;
+}
+
+.oppo-container {
+  width: 100%;
+  height: 100%;
+
+  .header {
+    margin-top: px2rem(196);
+
+    .header-title {
+      color: #fff;
+      text-align: center;
+      font-size: px2rem(48);
+      line-height: px2rem(60);
+    }
+
+    .header-sub-title {
+      color: #7D7D7D;
+      text-align: center;
+      margin-top: px2rem(14);
+      font-size: px2rem(24);
+      line-height: px2rem(33);
+    }
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/images/main_bg.svg');
+    background-size: 100% px2rem(1000);
+    height: px2rem(1000);
+
+    .enco-video {
+      width: px2rem(400);
+      height: px2rem(330);
+      position: absolute;
+    }
+
+    .enco-image {
+      width: px2rem(264);
+      height: px2rem(330);
+    }
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    bottom: px2rem(77);
+    height: px2rem(96);
+
+    .buy-button {
+      margin: 0 auto;
+      text-align: center;
+      width: px2rem(660);
+      height: px2rem(96);
+      line-height: px2rem(96);
+      background: linear-gradient(180deg, #FF6600 0%, #FF6417 77%, #FF7B00 100%),
+      linear-gradient(0deg, #000000 0%, #FFFFFF 100%),
+      linear-gradient(86deg, rgba(255,255,255,0.39) 4%, rgba(255,145,7,0.00) 100%, rgba(255,145,7,0.00) 100%),
+      linear-gradient(180deg, #FF6600 0%, #FF6417 77%, #FF7B00 100%);
+      box-shadow: 0  px2rem(16) px2rem(24) 0 #452404, px2rem(-24) px2rem(-12) px2rem(24) 0 #000000;
+      border-radius: px2rem(80);
+      font-size: px2rem(32);
+      color: #fff;
+    }
+
+  }
+
+}
+
